@@ -57,6 +57,7 @@ function blender(arr){
         for(let j = 0; j < 9; j++){
             const v = "." + i + (j+1);
             // console.log(v);     
+                console.log(arr[i][j]);
                 document.getElementById(v).value = arr[i][j];
         }
     }
@@ -68,7 +69,7 @@ function timer( then, n){
 
 function outsource(nw){
     const x = document.getElementById("err");
-    if(x) { x.innerHTML = "";}
+    if(x) {x.innerHTML = "  ";}
     for(let rows = 0; rows < 9; rows++){
         for(let col = 0; col < 9; col++){
             if(timer(nw ,8)) throw("wrong input");
@@ -118,6 +119,7 @@ function boxChecker(i, j, board , x){
 
 function reset(){
 
+    // console.log(arr);
     const arrr = document.querySelectorAll("input");
     arr = [];
     for(let i = 0; i < arrr.length; i++){
