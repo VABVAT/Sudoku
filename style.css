@@ -35,6 +35,8 @@
     height: 33%;
     border-top: none;
     border-left: none;
+    border-right: 0.3px solid black;
+    border-bottom: 0.3px solid black;
 }
 
 .grd2{
@@ -44,6 +46,7 @@
     border-left: none;
     border-right: 1px dotted black;
     border-bottom: 1px dotted black;
+    background-color: beige;
 }
 input{
     width: 95%;
@@ -51,6 +54,7 @@ input{
     text-align: center;
     font-weight: bolder;
     border: none;
+    background-color: beige;
 }
 
 .btns{
