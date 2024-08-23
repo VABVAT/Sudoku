@@ -57,7 +57,6 @@ function blender(arr){
         for(let j = 0; j < 9; j++){
             const v = "." + i + (j+1);
             // console.log(v);     
-                console.log(arr[i][j]);
                 document.getElementById(v).value = arr[i][j];
         }
     }
@@ -73,9 +72,8 @@ function outsource(nw){
     for(let rows = 0; rows < 9; rows++){
         for(let col = 0; col < 9; col++){
             if(timer(nw ,60)) throw("wrong input");
-            if(arr[rows][col] === "."){
+            if(arr[rows][col] == "."){
                 for(let c = '1'; c <= '9'; c++){
-                    console.log(c);
                 if(rowChecker(rows,arr, c, col) && Colchecker(col, arr, c, rows) &&  boxChecker(rows, col, arr, c)){
                     arr[rows][col] = c;
                     if(outsource(nw)){
@@ -93,13 +91,13 @@ return true;
 function  rowChecker(rows, arr, c,  col){
 
     for(let i = 0; i <9; i++){
-        if(arr[rows][i] == c && i!=col) return false;
+        if(arr[rows][i] == c && (col != i)) return false;
     }
     return true;
 }
 function Colchecker(col, arr, c, rws){
     for(let i = 0; i < 9; i++){
-        if(arr[i][col] == c && i != rws) return false;
+        if(arr[i][col] == c && rws != i) return false;
     }
     return true;
 }
@@ -110,7 +108,7 @@ function boxChecker(i, j, board , x){
 
     for (let r = row_n; r < row_n + 3; r++) {
         for (let c = col_n; c < col_n + 3; c++) {
-            if (board[r][c] == x && (r!=i && j!=c) )
+            if (board[r][c] == x &&(i != r && j !=c ))
                 return false;
         }
     }
