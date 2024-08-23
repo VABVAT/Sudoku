@@ -72,7 +72,7 @@ function outsource(nw){
     if(x) {x.innerHTML = "  ";}
     for(let rows = 0; rows < 9; rows++){
         for(let col = 0; col < 9; col++){
-            if(timer(nw ,8)) throw("wrong input");
+            if(timer(nw ,60)) throw("wrong input");
             if(arr[rows][col] === "."){
                 for(let c = '1'; c <= '9'; c++){
                     console.log(c);
