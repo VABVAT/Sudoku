@@ -31,12 +31,12 @@
     /* display: inline-block; */
     display: flex;
     flex-wrap: wrap;
-    width: 132px;
-    height: 132px;
+    width: 33%;
+    height: 33%;
     border-top: none;
     border-left: none;
-    border-right: 0.6px solid black;
-    border-bottom: 0.6px solid black;
+    border-right: 0.3px solid black;
+    border-bottom: 0.3px solid black;
 }
 
 .grd2{
