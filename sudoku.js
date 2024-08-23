@@ -69,7 +69,7 @@ function timer( then, n){
 }
 
 function outsource(nw){
-    const x = document.getElementById("sp");
+    const x = document.getElementById("err");
     x.innerHTML = "";
     for(let rows = 0; rows < 9; rows++){
         for(let col = 0; col < 9; col++){
